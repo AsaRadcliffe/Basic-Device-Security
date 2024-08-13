@@ -47,11 +47,11 @@ Now that we've reached the CLI our first objective will be to change the name of
 </p>
 <br />
 
+<p align = "center">
 
+<img src = "https://github.com/user-attachments/assets/5832a8a5-512c-421f-b638-a9bdf1a3c532">
 
-
-
-
+</p>
 
 <p>
 After entering privileged EXEC mode, we'll want to further augment our level of authority by entering global configuration mode using the 'config t' command. Although privileged EXEC mode grants more access than user EXEC mode, it's important to understand that these modes aren't simply steps in a linear progression of access levels. User EXEC mode is designed for basic monitoring and troubleshooting, while global configuration mode, though separate, is intended for comprehensive system-wide changes. This separation helps compartmentalize responsibilities, ensuring that different functions, such as monitoring versus configuring, are handled distinctly to maintain system integrity and security.
