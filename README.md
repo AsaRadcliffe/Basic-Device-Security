@@ -38,10 +38,21 @@ We'll start this exercise by accessing the switch's command-line interface (CLI)
 </p>
 <br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p align = "center">
+<img src= "https://github.com/user-attachments/assets/86aedc88-3607-426a-a512-cb2edfac89a2">
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now that we've reached the CLI our first objective will be to change the name of the switch from 'Switch' to 'SW1'. You may have noticed that next to the word Switch (the device's current name) is a ">". This indicates that our device is currently in user EXEC mode, which means that the authority we have to make changes and view information is very limited. To change this we must enter privleged EXEC mode by executing the 'Enable' command. You'll know the command worked when the '>' symbol next to our device's name becomes a '#', as it has in the image above.
 </p>
 <br />
+
+
+
+
+
+
+
+<p>
+After entering privileged EXEC mode, we'll want to further augment our level of authority by entering global configuration mode using the 'config t' command. Although privileged EXEC mode grants more access than user EXEC mode, it's important to understand that these modes aren't simply steps in a linear progression of access levels. User EXEC mode is designed for basic monitoring and troubleshooting, while global configuration mode, though separate, is intended for comprehensive system-wide changes. This separation helps compartmentalize responsibilities, ensuring that different functions, such as monitoring versus configuring, are handled distinctly to maintain system integrity and security.
+</p>
