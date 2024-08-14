@@ -56,3 +56,14 @@ Now that we've reached the CLI our first objective will be to change the name of
 <p>
 After entering privileged EXEC mode, we'll want to further augment our level of authority by entering global configuration mode using the 'config t' command. Although privileged EXEC mode grants more access than user EXEC mode, it's important to understand that these modes aren't simply steps in a linear progression of access levels. User EXEC mode is designed for basic monitoring and troubleshooting, while global configuration mode, though separate, is intended for comprehensive system-wide changes. This separation helps compartmentalize responsibilities, ensuring that different functions, such as monitoring versus configuring, are handled distinctly to maintain system integrity and security.
 </p>
+<p align = "center">
+
+<img src = "https://github.com/user-attachments/assets/a718388c-2a72-4037-a2b1-5795ca217ae4">
+
+</p>
+
+<p>Now that we've activated global configuration mode we can change the name of our switch. We'll do this by typing 'hostname SW1' into the command line.In this scenario 'hostname' is the command telling the terminal to change the name of our device, and 'SW1' is the name we're changing it to. If you've executed these steps correctly you'll notice that the text in front of the command line that once said 'Switch (config)#' now says 'SW1(config)#'.</p>
+
+
+
+<p>While we're still in global configuration mode, we'll want to strengthen the security of our device by assigning it an encrypted password. While assigning unencrypted passwords using the 'password' command is possible, doing so is a poor security practice and should never be done in a scenario where security is critical. In this exercise, we will be using Type 5 encryption by using the 'enable secret [desired password]' command. In our case, the password is 'Poneglyph,' so we'll type 'enable secret Poneglyph.' While Type 8 encryption is more secure and is becoming the new security standard, Type 5 may still be used in situations where compatibility with older devices is necessary, or when organizational policies have not yet been updated to require Type 8. However, it's important to consider that as security requirements evolve, transitioning to Type 8 encryption should be a priority to ensure the highest level of protection. To assign type 8 encryption you'd type 'enable algorithm </p>
