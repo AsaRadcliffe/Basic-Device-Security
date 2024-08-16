@@ -92,3 +92,28 @@ The running configuration contains all the current settings and configurations t
 
 
 <p>Finally, now that we have made and verified the necessary changes to our device, we'll exit privileged EXEC mode and test our password. To do this, type 'exit' into the command line. When you type the 'enable' command to re-enter privileged EXEC mode, you will be prompted to enter your password. For security reasons, the password will not be visible as you type it, so be mindful of your input. Remember that passwords are case-sensitive, so if you have issues accessing the device, make sure that your case entries are correct and that Caps Lock is turned off. If you've entered the password correctly and pressed 'Enter,' you should be back in privileged EXEC mode. With this, our network device configuration exercise is complete! </p>
+
+
+<h2>Conclusion</h2>
+
+<p>In this exercise, we utilized Cisco Packet Tracer to practice configuring a switch using Cisco’s IOS command-line interface. We began by accessing the switch’s CLI, where we demonstrated how to enter privileged EXEC mode and global configuration mode. This process allowed us to change the switch’s name and configure an encrypted password to enhance security.
+
+We also discussed how to view the chagnes we made in the running configuration, and the importance of saving changes to the device’s startup configuration to ensure that updates are preserved even if the device is powered off or restarted. By executing the necessary commands, we verified that the password encryption and configuration changes were applied correctly and saved.</p>
+
+<h3>Key Takeaways</h3>
+
+<h4>Accessing CLI:</h4>
+We accessed the swtich's CLI using Cisco Packet Tracer and briefly detailed how to access the CLI while using a real, physical network device.
+
+<h4>Configuration Modes:</h4>
+We explored privileged EXEC and global configuration modes, emphasizing their distinct functions and non-linear relationship.
+
+<h4>Security Enhancement:</h4>
+We changed the switch’s hostname and applied Type 5 encryption to strengthen security. We also briefly explained why it is important to encrypt passwords, in which scenarios one may use different encryption algorithms, and how to apply type 8 encryption algorithm to a password.
+
+<h4>Saving Changes</h4>
+We confirmed the importance of saving changes to the startup configuration to prevent loss of critical updates, as well as the potential consequences of failing to do so.
+</br>
+</br>
+</br>
+<p>This exercise highlights the critical importance of proper configuration and security practices in network management. It reinforces the need to understand different modes of access and their specific purposes to maintain device integrity and security. Ensuring that configurations are saved and correctly implemented is vital for effective network administration and protection against potential vulnerabilities.</p>
