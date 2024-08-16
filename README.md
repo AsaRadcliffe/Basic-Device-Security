@@ -1,6 +1,9 @@
 
 <h1>Cisco Packet Tracer - Basic Device Security</h1>
 .<br />
+<p align = "center">
+<img src = "https://github.com/user-attachments/assets/b4cf2a72-652f-4b7c-95be-eadb3b59c7de">
+</p>
 
 
 <h2>Introduction</h2>
