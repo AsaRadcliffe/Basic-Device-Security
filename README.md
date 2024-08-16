@@ -68,6 +68,14 @@ After entering privileged EXEC mode, we'll want to further augment our level of 
 <img src = "https://github.com/user-attachments/assets/535f0e9a-8b0c-4d03-ba0a-f62dc88a8842">
 </p>
 
-<p>While we're still in global configuration mode, we'll want to strengthen the security of our device by assigning it an encrypted password. While assigning unencrypted passwords using the 'password' command is possible, doing so is a poor security practice and should never be done in a scenario where security is critical. 
+<p>While we're still in global configuration mode, we'll also want to strengthen the security of our device by assigning it an encrypted password. Assigning unencrypted passwords using the 'password' command is possible, but doing so is a poor security practice and should never be done in a scenario where security is critical. 
   
-In this exercise, we will be using Type 5 encryption by using the 'enable secret < password >' command. In our case, the password is 'Poneglyph,' so we'll type 'enable secret Poneglyph.' While Type 8 encryption is more secure and is becoming the new security standard, Type 5 may still be used in situations where compatibility with older devices is necessary, or when organizational policies have not yet been updated to require Type 8. However, it's important to consider that as security requirements evolve, transitioning to Type 8 encryption should be a priority to ensure the highest level of protection. To assign type 8 encryption you'd type 'enable algorithm-type sha256 secret < password >'. </p>
+In this exercise, we will be using Type 5 encryption by using the 'enable secret < password >' command. While Type 8 encryption is more secure and is becoming the new security standard, Type 5 may still be used in situations where compatibility with older devices is necessary, or when organizational policies have not yet been updated to require Type 8. However, it's important to consider that as security requirements evolve, transitioning to Type 8 encryption should be a priority to ensure the highest level of protection. To assign type 8 encryption you'd type 'enable algorithm-type sha256 secret < password >'. </p>
+
+<p align = "center">
+
+<img src = "https://github.com/user-attachments/assets/c4843a4d-bcea-4103-89be-279126fbe4fd">
+
+</p>
+
+<p>Having assigned a password with type 5 encryption, we'll now want to return to privileged EXEC mode to ensure that the password is properly configured and to observe how it appears in its encrypted form within the running configuration. We'll do this by executing the 'exit' command in global configuration mode, then the 'show running-config' commmand in privileged EXEC mode.  </p>
