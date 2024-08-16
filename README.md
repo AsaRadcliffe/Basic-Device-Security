@@ -78,6 +78,10 @@ In this exercise, we will be using Type 5 encryption by using the 'enable secret
   
 The running configuration contains all the current settings and configurations that are actively in use by the router. This mode is essential for verifying changes and troubleshooting because it allows us to access real-time information such as interface statuses, routing tables, and security settings. By viewing the running configuration, we can confirm that our password has been assigned and see its encrypted form. As we can see, the highlighted series of letters, numbers, and symbols does not resemble the password we assigned to the switch. This change in the running configuration not only protects the integrity of our system from potential onlookers in the same physical space but also provides stronger security against remote infiltrators compared to an unencrypted password or one using a weaker encryption algorithm, such as type 7.</p>
 
+<p align = "center">
 
+<img src = "https://github.com/user-attachments/assets/c6284ee8-3255-4a4f-9df0-da84c22a919d">
+
+</p>
 
 <p>Now that we've taken measures to ensure our device's security, we need to make sure the changes are saved to the device's startup configuration. We can do this by simply typing 'write' into the command line from privileged EXEC mode. This step is as critical as it is simple because the device's running configuration is only stored in its RAM. If we make important changes that should become the new defaults but do not save them, and the device is powered off or restarted, those changes will be lost, leaving the device in a vulnerable state. For more complex or critical changes, this oversight could result in significant time, effort, and monetary cost to rectify, especially if the device supports essential services.</p>
