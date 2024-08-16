@@ -16,10 +16,6 @@
 
 - Lab Setup: A small network consisting of a switch, router, and a few PCs connected in Cisco Packet Tracer.
 
-<h2>Operating Systems Used </h2>
-
-- Windows 10</b> (21H2)
-
 
 <h2>Step-by-Step Implementation</h2>
 <p align = "center">
@@ -34,7 +30,7 @@ In this simple excercise we will be using Cisco Packet Tracer to practice config
 <img src="https://github.com/user-attachments/assets/8ca1adb9-0c9d-439b-94a1-d7de571984a2">
 </p>
 <p>
-We'll start this exercise by accessing the switch's command-line interface (CLI). To do this, click on the switch's image and then select the 'CLI' tab.
+We'll start this exercise by accessing the switch's command-line interface (CLI). To do this, click on the switch's image and then select the 'CLI' tab. On a real network device you'd do this by connecting your computer to the device using a console cable via the console port, or connecting remotely using SSH or Telnet if you're configuring a router that has an IP address. You would then open a terminal emulator like PuTTY or Tera Term; for console access, select the serial connection and configure the appropriate settings (9600 baud rate, 8 data bits, no parity, 1 stop bit, no flow control). For SSH/Telnet access, enter the router's IP address and choose the connection type (preferably SSH).
 </p>
 <br />
 
@@ -54,7 +50,7 @@ Now that we've reached the CLI our first objective will be to change the name of
 </p>
 
 <p>
-After entering privileged EXEC mode, we'll want to further augment our level of authority by entering global configuration mode using the 'config t' command. Although privileged EXEC mode grants more access than user EXEC mode, it's important to understand that these modes aren't simply steps in a linear progression of access levels. User EXEC mode is designed for basic monitoring and troubleshooting, while global configuration mode, though separate, is intended for comprehensive system-wide changes. This separation helps compartmentalize responsibilities, ensuring that different functions, such as monitoring versus configuring, are handled distinctly to maintain system integrity and security.
+After entering privileged EXEC mode, we'll want to further augment our level of authority by entering global configuration mode by using the 'config t' command. Although global configuration mode grants users more authority than privileged EXEC mode, it's important to understand that these modes aren't simply steps in a linear progression of access levels. Privileged EXEC mode is designed primarily for monitoring and executing higher-level commands, allowing limited configuration changes. However, it doesn't grant unrestricted control over the device's settings. Global configuration mode, on the other hand, is used for making system-wide changes that impact the overall operation of the device. This compartmentalization ensures that different responsibilities are managed separately, maintaining the integrity and security of the device's configuration.
 </p>
 <p align = "center">
 
@@ -78,6 +74,6 @@ In this exercise, we will be using Type 5 encryption by using the 'enable secret
 
 </p>
 
-<p>Having assigned a password with type 5 encryption, we'll now want to return to privileged EXEC mode to ensure that the password is properly configured and to observe how it appears in its encrypted form within the running configuration. We'll do this by executing the 'exit' command in global configuration mode, then executing the 'show running-config' commmand in privileged EXEC mode. Although global configuration mode grants a higher level of authority for making changes to the router's configuration, we still need to return to privileged EXEC mode to view the running configuration because, once again, the purpose of global configuration mode is to make comprehensive 'global' changes to the system, whereas privileged EXEC mode is for accessing information and troubleshooting. It is essential to remember the compartmentalization of responsibilities between privileged EXEC mode and global configuration mode to maintain security, prevent errors, and ensure efficient troubleshooting by clearly separating the tasks of viewing configurations from making system-wide changes.
+<p>Having assigned a password with type 5 encryption, we'll now want to return to privileged EXEC mode to ensure that the password is properly configured and to observe how it appears in its encrypted form within the running configuration. We'll do this by executing the 'exit' command from global configuration mode, then executing the 'show running-config' commmand in privileged EXEC mode. Although global configuration mode grants a higher level of authority for making changes to the router's configuration, we still need to return to privileged EXEC mode to view the running configuration because, once again, the purpose of global configuration mode is to make comprehensive 'global' changes to the system, whereas privileged EXEC mode is for accessing information and troubleshooting. It is essential to remember the compartmentalization of responsibilities between privileged EXEC mode and global configuration mode to maintain security, prevent errors, and ensure efficient troubleshooting by clearly separating the tasks of viewing configurations from making system-wide changes.
   
 The running configuration contains all the current settings and configurations that are actively in use by the router. This mode is essential for verifying changes and troubleshooting because it allows us to access real-time information such as interface statuses, routing tables, and security settings. By viewing the running configuration, we can confirm that our password has been assigned and see its encrypted form.  </p>
