@@ -30,7 +30,7 @@ In this simple exercise, we will use Cisco Packet Tracer to practice configuring
 <img src="https://github.com/user-attachments/assets/8ca1adb9-0c9d-439b-94a1-d7de571984a2">
 </p>
 <p>
-We'll start by accessing the switch's command-line interface (CLI). To do this, click on the switch's image and then select the 'CLI' tab. On a real network device, you would connect your computer to the device using a console cable via the console port or connect remotely using SSH or Telnet if the device has an IP address. Then, you'd open a terminal emulator like PuTTY or Tera Term. For console access, select the serial connection and configure the appropriate settings (9600 baud rate, 8 data bits, no parity, 1 stop bit, no flow control). For SSH/Telnet access, enter the device's IP address and choose the connection type (preferably SSH).
+We will start by accessing the switch's command-line interface (CLI). To do this, click on the switch's image and then select the 'CLI' tab. On a real network device, you would connect your computer to the device using a console cable via the console port or connect remotely using SSH or Telnet if the device has an IP address. Then, you would open a terminal emulator like PuTTY or Tera Term. For console access, select the serial connection and configure the appropriate settings (9600 baud rate, 8 data bits, no parity, 1 stop bit, no flow control). For SSH/Telnet access, enter the device's IP address and choose the connection type (preferably SSH).
 </p>
 <br />
 
@@ -39,7 +39,7 @@ We'll start by accessing the switch's command-line interface (CLI). To do this, 
 
 </p>
 <p>
-Now that we've reached the CLI our first objective will be to change the name of the switch from 'Switch' to 'SW1'. You may have noticed that next to the word Switch (the device's current name) is a ">". This indicates that our device is currently in user EXEC mode, which means that the authority we have to make changes and view information is very limited. To gain additional authority, we must enter privileged EXEC mode by executing the 'enable' command. You will know the command was successful when the '>' symbol changes to a '#' in the prompt, as shown in the image above.
+Now that we have reached the CLI our first objective will be to change the name of the switch from 'Switch' to 'SW1'. You may have noticed that next to the word Switch (the device's current name) is a ">". This indicates that our device is currently in user EXEC mode, which means that the authority we have to make changes and view information is very limited. To gain additional authority, we must enter privileged EXEC mode by executing the 'enable' command. You will know the command was successful when the '>' symbol changes to a '#' in the prompt, as shown in the image above.
 </p>
 <br />
 
@@ -50,7 +50,7 @@ Now that we've reached the CLI our first objective will be to change the name of
 </p>
 
 <p>
-After entering privileged EXEC mode, we'll want to further augment our level of authority by entering global configuration mode by using the 'config t' command. Although global configuration mode grants users more authority than privileged EXEC mode, it's important to understand that these modes aren't simply steps in a linear progression of access levels. Privileged EXEC mode is designed primarily for monitoring and executing higher-level commands, allowing limited configuration changes. However, it doesn't grant unrestricted control over the device's settings. Global configuration mode, on the other hand, is used for making system-wide changes that impact the overall operation of the device. This compartmentalization ensures that different responsibilities are managed separately, maintaining the integrity and security of the device's configuration.
+After entering privileged EXEC mode, we will further augment our level of authority by entering global configuration mode by using the 'config t' command. Although global configuration mode grants users more authority than privileged EXEC mode, it is important to understand that these modes are not simply steps in a linear progression of access levels. Privileged EXEC mode is designed primarily for monitoring and executing higher-level commands, allowing limited configuration changes. However, it does not grant unrestricted control over the device's settings. Global configuration mode, on the other hand, is used for making system-wide changes that impact the overall operation of the device. This compartmentalization ensures that different responsibilities are managed separately, maintaining the integrity and security of the device's configuration.
 </p>
 <p align = "center">
 
@@ -58,15 +58,15 @@ After entering privileged EXEC mode, we'll want to further augment our level of 
 
 </p>
 
-<p>Now that we've enabled global configuration mode we can change the name of our switch. We'll do this by typing 'hostname SW1' into the command line. In this scenario 'hostname' is the command telling the terminal to change the name of our device, and 'SW1' is the name we're changing it to. If you've executed these steps correctly you'll notice that the text in front of the command line that once said 'Switch (config)#' now says 'SW1(config)#'.</p>
+<p>In global configuration mode, we will change the switch's name by typing 'hostname SW1' into the command line. In this context, 'hostname' is the command used to change the device's name, and 'SW1' is the new name. If executed correctly, you will see that the prompt changes from 'Switch(config)#' to 'SW1(config)#'.</p>
 
 <p align = "center">
 <img src = "https://github.com/user-attachments/assets/535f0e9a-8b0c-4d03-ba0a-f62dc88a8842">
 </p>
 
-<p>While we're still in global configuration mode, we'll also want to strengthen the security of our device by assigning it an encrypted password. Assigning unencrypted passwords using the 'enable password' command is possible, but doing so is a poor security practice and should never be done in a scenario where security is critical. 
+<p>While still in global configuration mode, we will also enhance the security of our device by assigning an encrypted password. Assigning unencrypted passwords using the 'enable password' command is poor security practice and should be avoided in scenarios where security is critical. 
   
-In this exercise, we will be using Type 5 encryption by using the 'enable secret < password >' command. While Type 8 encryption is more secure and is becoming the new security standard, Type 5 may still be used in situations where compatibility with older devices is necessary, or when organizational policies have not yet been updated to require Type 8. However, it's important to consider that as security requirements evolve, transitioning to Type 8 encryption should be a priority to ensure the highest level of protection. To assign type 8 encryption you'd type 'enable algorithm-type sha256 secret < password >'. </p>
+In this exercise, we will be using Type 5 encryption by using the 'enable secret < password >' command. While Type 8 encryption is more secure and is becoming the new security standard, Type 5 may still be used in situations where compatibility with older devices is necessary, or when organizational policies have not yet been updated to require Type 8. However, it's important to consider that as security requirements evolve, transitioning to Type 8 encryption should be a priority to ensure the highest level of protection. To assign type 8 encryption you would type 'enable algorithm-type sha256 secret < password >'. </p>
 
 <p align = "center">
 
