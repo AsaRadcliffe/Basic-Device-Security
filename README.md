@@ -22,7 +22,7 @@
 <img src= "https://github.com/user-attachments/assets/140e114b-1521-46af-8c3e-fb6a57beebb7">
 </p>
 <p>
-In this simple excercise we will be using Cisco Packet Tracer to practice configuring the settings of a switch using basic commands in Cisco's proprietary IOS command line interface.
+In this simple exercise, we will use Cisco Packet Tracer to practice configuring the settings of a switch using basic commands in Cisco's proprietary IOS command-line interface.
 </p>
 <br />
 
@@ -30,7 +30,7 @@ In this simple excercise we will be using Cisco Packet Tracer to practice config
 <img src="https://github.com/user-attachments/assets/8ca1adb9-0c9d-439b-94a1-d7de571984a2">
 </p>
 <p>
-We'll start this exercise by accessing the switch's command-line interface (CLI). To do this, click on the switch's image and then select the 'CLI' tab. On a real network device you'd do this by connecting your computer to the device using a console cable via the console port, or connecting remotely using SSH or Telnet if you're configuring a router that has an IP address. You would then open a terminal emulator like PuTTY or Tera Term; for console access, select the serial connection and configure the appropriate settings (9600 baud rate, 8 data bits, no parity, 1 stop bit, no flow control). For SSH/Telnet access, enter the router's IP address and choose the connection type (preferably SSH).
+We'll start by accessing the switch's command-line interface (CLI). To do this, click on the switch's image and then select the 'CLI' tab. On a real network device, you would connect your computer to the device using a console cable via the console port or connect remotely using SSH or Telnet if the device has an IP address. Then, you'd open a terminal emulator like PuTTY or Tera Term. For console access, select the serial connection and configure the appropriate settings (9600 baud rate, 8 data bits, no parity, 1 stop bit, no flow control). For SSH/Telnet access, enter the device's IP address and choose the connection type (preferably SSH).
 </p>
 <br />
 
@@ -85,3 +85,11 @@ The running configuration contains all the current settings and configurations t
 </p>
 
 <p>Now that we've taken measures to ensure our device's security, we need to make sure the changes are saved to the device's startup configuration. We can do this by simply typing 'write' into the command line from privileged EXEC mode. This step is as critical as it is simple because the device's running configuration is only stored in its RAM. If we make important changes that should become the new defaults but do not save them, and the device is powered off or restarted, those changes will be lost, leaving the device in a vulnerable state. For more complex or critical changes, this oversight could result in significant time, effort, and monetary cost to rectify, especially if the device supports essential services.</p>
+
+<p align = "center">
+<img src = "https://github.com/user-attachments/assets/73ab6893-4796-4b1a-a4c0-32a68ba5675a">
+</p>
+
+
+
+<p>Finally, now that we have made and verified the necessary changes to our device, we'll exit privileged EXEC mode and test our password. To do this, type 'exit' into the command line. When you type the 'enable' command to re-enter privileged EXEC mode, you will be prompted to enter your password. For security reasons, the password will not be visible as you type it, so be mindful of your input. Remember that passwords are case-sensitive, so if you have issues accessing the device, make sure that your case entries are correct and that Caps Lock is turned off. If you've entered the password correctly and pressed 'Enter,' you should be back in privileged EXEC mode. With this, our network device configuration exercise is complete! </p>
