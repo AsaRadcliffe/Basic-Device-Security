@@ -39,7 +39,7 @@ We'll start by accessing the switch's command-line interface (CLI). To do this, 
 
 </p>
 <p>
-Now that we've reached the CLI our first objective will be to change the name of the switch from 'Switch' to 'SW1'. You may have noticed that next to the word Switch (the device's current name) is a ">". This indicates that our device is currently in user EXEC mode, which means that the authority we have to make changes and view information is very limited. To change this we must enter privleged EXEC mode by executing the 'Enable' command. You'll know the command worked when the '>' symbol next to our device's name becomes a '#', as it has in the image above.
+Now that we've reached the CLI our first objective will be to change the name of the switch from 'Switch' to 'SW1'. You may have noticed that next to the word Switch (the device's current name) is a ">". This indicates that our device is currently in user EXEC mode, which means that the authority we have to make changes and view information is very limited. To gain additional authority, we must enter privileged EXEC mode by executing the 'enable' command. You will know the command was successful when the '>' symbol changes to a '#' in the prompt, as shown in the image above.
 </p>
 <br />
 
