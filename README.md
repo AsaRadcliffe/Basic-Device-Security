@@ -69,7 +69,7 @@ After entering privileged EXEC mode, we will further augment our level of author
 
 <p>While still in global configuration mode, we will also enhance the security of our device by assigning an encrypted password. Assigning unencrypted passwords using the 'enable password' command is poor security practice and should be avoided in scenarios where security is critical. 
   
-In this exercise, we will be using Type 5 encryption by using the 'enable secret < password >' command. While Type 8 encryption is more secure and is becoming the new security standard, Type 5 may still be used in situations where compatibility with older devices is necessary, or when organizational policies have not yet been updated to require Type 8. However, it's important to consider that as security requirements evolve, transitioning to Type 8 encryption should be a priority to ensure the highest level of protection. To assign type 8 encryption you would type 'enable algorithm-type sha256 secret < password >'. </p>
+In this exercise, we will be using Type 5 encryption by using the 'enable secret < password >' command. While Type 9 encryption is more secure and is becoming the new security standard, Type 5 may still be used in situations where compatibility with older devices is necessary, or when organizational policies have not yet been updated to require Type 9. However, it's important to consider that as security requirements evolve, transitioning to Type 9 encryption should be a priority to ensure the highest level of protection. To assign type 9 encryption you would type 'enable algorithm-type scrypt secret < password >'. </p>
 
 <p align = "center">
 
@@ -112,7 +112,7 @@ We accessed the swtich's CLI using Cisco Packet Tracer and briefly detailed how 
 We explored privileged EXEC and global configuration modes, emphasizing their distinct functions and non-linear relationship.
 
 <h4>Security Enhancement:</h4>
-We changed the switch’s hostname and applied Type 5 encryption to strengthen security. We also briefly explained why it is important to encrypt passwords, in which scenarios one may use different encryption algorithms, and how to apply type 8 encryption algorithm to a password.
+We changed the switch’s hostname and applied Type 5 encryption to strengthen security. We also briefly explained why it is important to encrypt passwords, in which scenarios one may use different encryption algorithms, and how to apply type 9 encryption algorithm to a password.
 
 <h4>Saving Changes</h4>
 We confirmed the importance of saving changes to the startup configuration to prevent loss of critical updates, as well as the potential consequences of failing to do so.
